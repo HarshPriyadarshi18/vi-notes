@@ -1,0 +1,162 @@
+.editor-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: white;
+}
+
+.editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid #e0e0e0;
+  background: #fafafa;
+}
+
+.editor-header h1 {
+  font-size: 24px;
+  color: #333;
+  font-weight: 600;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.user-email {
+  font-size: 14px;
+  color: #666;
+}
+
+.save-btn,
+.logout-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.save-btn {
+  background: #667eea;
+  color: white;
+}
+
+.save-btn:hover:not(:disabled) {
+  background: #5568d3;
+}
+
+.save-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.logout-btn {
+  background: #e74c3c;
+  color: white;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+}
+
+.save-status {
+  font-size: 12px;
+  font-weight: 600;
+  color: #27ae60;
+  animation: fadeInOut 0.5s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.editor-main {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.editor-textarea {
+  flex: 1;
+  padding: 24px;
+  border: none;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  resize: none;
+  outline: none;
+  background: white;
+}
+
+.editor-textarea::placeholder {
+  color: #bbb;
+}
+
+.editor-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  border-top: 1px solid #e0e0e0;
+  background: #fafafa;
+  font-size: 13px;
+  color: #666;
+}
+
+.stats,
+.paste-stats {
+  display: flex;
+  gap: 24px;
+}
+
+.stats span,
+.paste-stats span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.stats strong,
+.paste-stats strong {
+  color: #333;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .editor-header {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .editor-header h1 {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .editor-footer {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .stats,
+  .paste-stats {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}

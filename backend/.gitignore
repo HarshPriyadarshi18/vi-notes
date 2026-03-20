@@ -1,0 +1,8 @@
+node_modules/
+.env
+
+MONGO_URI=mongodb+srv://harshpug23cs_db_user:QZ4sGTtQUCh63aVd@cluster0.6c2llrj.mongodb.net/vinotes?retryWrites=true&w=majority
+JWT_SECRET=vinotes_secret_key_2026_change_in_production
+JWT_EXPIRES_IN=7d
+PORT=5000
+NODE_ENV=development
