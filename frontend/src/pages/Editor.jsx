@@ -410,7 +410,7 @@ export const Editor = () => {
 
     setState(prev => ({
       ...prev,
-      pasteEvents: [...prev.pasteEvents, pasteEvent],
+      pasteEvents: [...prev.pasteEventasteEvs, pent],
       totalPastedChars: newTotalPastedChars,
       pasteRatio: newPasteRatio,
       pasteIndex: prev.pasteIndex + 1
